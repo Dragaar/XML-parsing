@@ -6,7 +6,7 @@
 //
 
 
-package com.epam.rd.java.basic.topic08;
+package com.epam.rd.java.basic.topic08.entity;
 
 import jakarta.xml.bind.annotation.XmlRegistry;
 
@@ -26,78 +26,54 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * 
  */
 @XmlRegistry
-public class ObjectFactory {
+public class FlowersFactory {
 
 
-    /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.epam.rd.java.basic.topic08
-     * 
-     */
-    public ObjectFactory() {
+    /**Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.epam.rd.java.basic.topic08*/
+    public FlowersFactory() {
     }
 
-    /**
-     * Create an instance of {@link Flowers }
-     * 
-     */
+    /**Create an instance of {@link Flowers }*/
     public Flowers createFlowers() {
         return new Flowers();
     }
 
-    /**
-     * Create an instance of {@link Flowers.Flower }
-     * 
-     */
+    /**Create an instance of {@link Flowers.Flower }*/
     public Flowers.Flower createFlowersFlower() {
         return new Flowers.Flower();
     }
 
-    /**
-     * Create an instance of {@link Flowers.Flower.GrowingTips }
-     * 
-     */
+
+    /**Create an instance of {@link Flowers.Flower.VisualParameters }*/
+    public Flowers.Flower.VisualParameters createFlowersFlowerVisualParameters() {
+        return new Flowers.Flower.VisualParameters();
+    }
+    /**Create an instance of {@link Flowers.Flower.VisualParameters.AveLenFlower }*/
+    public Flowers.Flower.VisualParameters.AveLenFlower createFlowersFlowerVisualParametersAveLenFlower() {
+        return new Flowers.Flower.VisualParameters.AveLenFlower();
+    }
+
+
+
+
+    /** Create an instance of {@link Flowers.Flower.GrowingTips }*/
     public Flowers.Flower.GrowingTips createFlowersFlowerGrowingTips() {
         return new Flowers.Flower.GrowingTips();
     }
 
-    /**
-     * Create an instance of {@link Flowers.Flower.VisualParameters }
-     * 
-     */
-    public Flowers.Flower.VisualParameters createFlowersFlowerVisualParameters() {
-        return new Flowers.Flower.VisualParameters();
-    }
-
-    /**
-     * Create an instance of {@link Flowers.Flower.GrowingTips.Tempreture }
-     * 
-     */
+    /** Create an instance of {@link Flowers.Flower.GrowingTips.Tempreture }*/
     public Flowers.Flower.GrowingTips.Tempreture createFlowersFlowerGrowingTipsTempreture() {
         return new Flowers.Flower.GrowingTips.Tempreture();
     }
 
-    /**
-     * Create an instance of {@link Flowers.Flower.GrowingTips.Lighting }
-     * 
-     */
+    /**Create an instance of {@link Flowers.Flower.GrowingTips.Lighting }*/
     public Flowers.Flower.GrowingTips.Lighting createFlowersFlowerGrowingTipsLighting() {
         return new Flowers.Flower.GrowingTips.Lighting();
     }
 
-    /**
-     * Create an instance of {@link Flowers.Flower.GrowingTips.Watering }
-     * 
-     */
+    /**Create an instance of {@link Flowers.Flower.GrowingTips.Watering }*/
     public Flowers.Flower.GrowingTips.Watering createFlowersFlowerGrowingTipsWatering() {
         return new Flowers.Flower.GrowingTips.Watering();
-    }
-
-    /**
-     * Create an instance of {@link Flowers.Flower.VisualParameters.AveLenFlower }
-     * 
-     */
-    public Flowers.Flower.VisualParameters.AveLenFlower createFlowersFlowerVisualParametersAveLenFlower() {
-        return new Flowers.Flower.VisualParameters.AveLenFlower();
     }
 
 }

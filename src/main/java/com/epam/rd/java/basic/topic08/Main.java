@@ -11,6 +11,8 @@ public class Main {
 		
 		String xmlFileName = args[0];
 		System.out.println("Input ==> " + xmlFileName);
+
+		ValidatorXML.ValidateXML();
 		
 		////////////////////////////////////////////////////////
 		// DOM
@@ -33,7 +35,7 @@ public class Main {
 		
 		// get
 		SAXController saxController = new SAXController(xmlFileName);
-		// PLACE YOUR CODE HERE
+		saxController.parce();
 		
 		// sort  (case 2)
 		// PLACE YOUR CODE HERE

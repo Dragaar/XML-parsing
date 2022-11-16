@@ -6,7 +6,7 @@
 //
 
 
-package com.epam.rd.java.basic.topic08;
+package com.epam.rd.java.basic.topic08.entity;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
