@@ -2,9 +2,7 @@
 <!--  Input XML document. This XML is valid against Test.xsd XML schema-->
 
 <flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://com.epam.rd.java.basic.topic08 input.xsd"
-		xmlns:tns="http://com.epam.rd.java.basic.topic08">
-
+		xsi:noNamespaceSchemaLocation="input.xsd">
 	<flower>
 		<name>Rose</name>
 		<soil>дерново-подзолистая</soil>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  XML schema -->
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		targetNamespace="http://com.epam.rd.java.basic.topic08"
-		xmlns:tns="http://com.epam.rd.java.basic.topic08">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<xs:element name = "flowers">
 		<xs:complexType>
