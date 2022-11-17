@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Input XML document. This XML is valid against Test.xsd XML schema-->
 
-<tn:flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://com.epam.rd.java.basic.topic08 input.xsd"
-		xmlns:tn="http://com.epam.rd.java.basic.topic08">
+		xmlns:tns="http://com.epam.rd.java.basic.topic08">
 
 	<flower>
 		<name>Rose</name>
@@ -39,4 +39,4 @@
 		<multiplying>черенки</multiplying>
 	</flower>
 
-</tn:flowers>
+</flowers>

@@ -1,20 +1,29 @@
 package com.epam.rd.java.basic.topic08.entity;
 
 public enum FlowersXmlTag {
-
-    FLOWERS("flowers"),
+    //мусять бути ідентичні до значення + uppercase, інакше алгоритм їх не побачить
+        //константи які є присутні, але не обробляються
+        FLOWERS("flowers"),
+        VISUALPARAMETERS("visualParameters"),
+        GROWINGTIPS("growingTips"),
+    FLOWER("flower"),
     NAME("name"),
     SOIL("soil"),
     ORIGIN("origin"),
-    VISUAL_PARAMETERS("visualParameters"),
-        STEM_COLOUR("stemColour"),
-        LEAF_COLOUR("leafColour"),
-        AVELEN_FLOWER("aveLenFlower"),
-    GROWING_TIPS("growingTips"),
-        TEMPERATURE("tempreture"),
+    //visualParameters
+        STEMCOLOUR("stemColour"),
+        LEAFCOLOUR("leafColour"),
+        AVELENFLOWER("aveLenFlower"),
+    //growingTips
+        TEMPRETURE("tempreture"),
         LIGHTING("lighting"),
         WATERING("watering"),
     MULTIPLYING("multiplying"),
+
+    //атрибути
+    MEASURE("measure"),
+    LIGHTREQUIRING("lightRequiring"),
+
     ;
     private String value;
     FlowersXmlTag(String value) {

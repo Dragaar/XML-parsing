@@ -35,7 +35,7 @@ public class Main {
 		
 		// get
 		SAXController saxController = new SAXController(xmlFileName);
-		saxController.parce();
+		saxController.parse();
 		
 		// sort  (case 2)
 		// PLACE YOUR CODE HERE

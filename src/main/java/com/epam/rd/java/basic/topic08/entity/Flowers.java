@@ -21,143 +21,6 @@ import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.XmlValue;
 
 
-/**
- * <p>Java class for anonymous complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="flower" maxOccurs="unbounded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="name"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                         &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="soil"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                         &lt;enumeration value="подзолистая"/&gt;
- *                         &lt;enumeration value="грунтовая"/&gt;
- *                         &lt;enumeration value="дерново-подзолистая"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="origin"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                         &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="visualParameters"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="stemColour"&gt;
- *                               &lt;simpleType&gt;
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                   &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
- *                                 &lt;/restriction&gt;
- *                               &lt;/simpleType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="leafColour"&gt;
- *                               &lt;simpleType&gt;
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                   &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
- *                                 &lt;/restriction&gt;
- *                               &lt;/simpleType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="aveLenFlower" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;simpleContent&gt;
- *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
- *                                     &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="cm" /&gt;
- *                                   &lt;/extension&gt;
- *                                 &lt;/simpleContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="growingTips"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="tempreture"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;simpleContent&gt;
- *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
- *                                     &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="celcius" /&gt;
- *                                   &lt;/extension&gt;
- *                                 &lt;/simpleContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="lighting"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="lightRequiring" use="required"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                           &lt;enumeration value="yes"/&gt;
- *                                           &lt;enumeration value="no"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="watering" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;simpleContent&gt;
- *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
- *                                     &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="mlPerWeek" /&gt;
- *                                   &lt;/extension&gt;
- *                                 &lt;/simpleContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="multiplying"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                         &lt;enumeration value="листья"/&gt;
- *                         &lt;enumeration value="черенки"/&gt;
- *                         &lt;enumeration value="семена"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
- * 
- * 
- */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "flower"
@@ -165,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlValue;
 @XmlRootElement(name = "flowers")
 public class Flowers {
 
-    protected List<Flowers.Flower> flower;
+    protected List<Flowers.Flower> flowers;
 
     /**
      * Gets the value of the flower property.
@@ -189,141 +52,13 @@ public class Flowers {
      * 
      * 
      */
-    public List<Flowers.Flower> getFlower() {
-        if (flower == null) {
-            flower = new ArrayList<Flowers.Flower>();
+    public List<Flowers.Flower> getFlowers() {
+        if (flowers == null) {
+            flowers = new ArrayList<Flowers.Flower>();
         }
-        return this.flower;
+        return this.flowers;
     }
 
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="name"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *               &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="soil"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *               &lt;enumeration value="подзолистая"/&gt;
-     *               &lt;enumeration value="грунтовая"/&gt;
-     *               &lt;enumeration value="дерново-подзолистая"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="origin"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *               &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="visualParameters"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="stemColour"&gt;
-     *                     &lt;simpleType&gt;
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                         &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-     *                       &lt;/restriction&gt;
-     *                     &lt;/simpleType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="leafColour"&gt;
-     *                     &lt;simpleType&gt;
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                         &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-     *                       &lt;/restriction&gt;
-     *                     &lt;/simpleType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="aveLenFlower" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;simpleContent&gt;
-     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-     *                           &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="cm" /&gt;
-     *                         &lt;/extension&gt;
-     *                       &lt;/simpleContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="growingTips"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="tempreture"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;simpleContent&gt;
-     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-     *                           &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="celcius" /&gt;
-     *                         &lt;/extension&gt;
-     *                       &lt;/simpleContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="lighting"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="lightRequiring" use="required"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                                 &lt;enumeration value="yes"/&gt;
-     *                                 &lt;enumeration value="no"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="watering" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;simpleContent&gt;
-     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-     *                           &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="mlPerWeek" /&gt;
-     *                         &lt;/extension&gt;
-     *                       &lt;/simpleContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="multiplying"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *               &lt;enumeration value="листья"/&gt;
-     *               &lt;enumeration value="черенки"/&gt;
-     *               &lt;enumeration value="семена"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "name",
@@ -715,7 +450,7 @@ public class Flowers {
 
                 @XmlValue
                 @XmlSchemaType(name = "positiveInteger")
-                protected BigInteger value;
+                protected Integer value;
                 @XmlAttribute(name = "measure", required = true)
                 protected String measure;
 
@@ -727,7 +462,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public BigInteger getValue() {
+                public Integer getValue() {
                     return value;
                 }
 
@@ -739,7 +474,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public void setValue(BigInteger value) {
+                public void setValue(Integer value) {
                     this.value = value;
                 }
 
@@ -799,7 +534,7 @@ public class Flowers {
 
                 @XmlValue
                 @XmlSchemaType(name = "positiveInteger")
-                protected BigInteger value;
+                protected Integer value;
                 @XmlAttribute(name = "measure", required = true)
                 protected String measure;
 
@@ -811,7 +546,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public BigInteger getValue() {
+                public Integer getValue() {
                     return value;
                 }
 
@@ -823,7 +558,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public void setValue(BigInteger value) {
+                public void setValue(Integer value) {
                     this.value = value;
                 }
 
@@ -1013,7 +748,7 @@ public class Flowers {
 
                 @XmlValue
                 @XmlSchemaType(name = "positiveInteger")
-                protected BigInteger value;
+                protected Integer value;
                 @XmlAttribute(name = "measure", required = true)
                 protected String measure;
 
@@ -1025,7 +760,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public BigInteger getValue() {
+                public Integer getValue() {
                     return value;
                 }
 
@@ -1037,7 +772,7 @@ public class Flowers {
                  *     {@link BigInteger }
                  *     
                  */
-                public void setValue(BigInteger value) {
+                public void setValue(Integer value) {
                     this.value = value;
                 }
 
@@ -1073,6 +808,29 @@ public class Flowers {
 
         }
 
+        @Override
+        public String toString() {
+            return "Flower{ \n" +
+                    " name='" + name + "',\n" +
+                    " soil='" + soil + "',\n" +
+                    " origin='" + origin + "',\n" +
+                    " visualParameters{\n" +
+                        "\tStemColour=" + visualParameters.getStemColour()+",\n" +
+                        "\tleafColour=" + visualParameters.leafColour + ",\n" +
+                        "\tAveLenFlower measure=" + visualParameters.getAveLenFlower().measure +
+                            ", value="+ visualParameters.getAveLenFlower().value + ",\n" +
+                    " growingTips{\n" +
+                        "\tTempreture measure=" + growingTips.getTempreture().getMeasure() +
+                        ", value="+ growingTips.getTempreture().value + ",\n" +
+
+                        "\tLighting Light Requiring=" + growingTips.getLighting().getLightRequiring() + ",\n" +
+
+                        "\tWatering measure=" + growingTips.getWatering().measure +
+                        ", value="+ growingTips.getWatering().value + ",\n" +
+
+                    " multiplying='" + multiplying + "'\n" +
+                    "}\n";
+        }
     }
 
 }
