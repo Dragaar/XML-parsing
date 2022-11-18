@@ -30,7 +30,7 @@ public class SAXController {
 			reader.setContentHandler(handler);
 			//reader.setErrorHandler(new StudentErrorHandler());
 			reader.parse(xmlFileName);
-			System.out.println(handler.getFlovers());
+			//System.out.println(handler.getFlovers());
 		} catch (SAXException | IOException | ParserConfigurationException e) {
 			e.printStackTrace();
 		}

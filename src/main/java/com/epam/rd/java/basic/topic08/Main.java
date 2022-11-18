@@ -20,7 +20,7 @@ public class Main {
 		
 		// get container
 		DOMController domController = new DOMController(xmlFileName);
-		// PLACE YOUR CODE HERE
+		domController.parse();
 
 		// sort (case 1)
 		// PLACE YOUR CODE HERE
@@ -34,8 +34,8 @@ public class Main {
 		////////////////////////////////////////////////////////
 		
 		// get
-		SAXController saxController = new SAXController(xmlFileName);
-		saxController.parse();
+		//SAXController saxController = new SAXController(xmlFileName);
+		//saxController.parse();
 		
 		// sort  (case 2)
 		// PLACE YOUR CODE HERE
