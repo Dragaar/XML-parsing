@@ -10,7 +10,10 @@ package com.epam.rd.java.basic.topic08.entity;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
+
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
@@ -26,7 +29,7 @@ import jakarta.xml.bind.annotation.XmlValue;
     "flower"
 })
 @XmlRootElement(name = "flowers")
-public class Flowers {
+public class Flowers{
 
     protected List<Flowers.Flower> flowers;
 
@@ -68,7 +71,7 @@ public class Flowers {
         "growingTips",
         "multiplying"
     })
-    public static class Flower {
+    public static class Flower{
 
         @XmlElement(required = true)
         protected String name;
@@ -227,59 +230,6 @@ public class Flowers {
             this.multiplying = value;
         }
 
-
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="tempreture"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;simpleContent&gt;
-         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-         *                 &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="celcius" /&gt;
-         *               &lt;/extension&gt;
-         *             &lt;/simpleContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="lighting"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="lightRequiring" use="required"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *                       &lt;enumeration value="yes"/&gt;
-         *                       &lt;enumeration value="no"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="watering" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;simpleContent&gt;
-         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-         *                 &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="mlPerWeek" /&gt;
-         *               &lt;/extension&gt;
-         *             &lt;/simpleContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
             "tempreture",
@@ -366,31 +316,6 @@ public class Flowers {
                 this.watering = value;
             }
 
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="lightRequiring" use="required"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-             *             &lt;enumeration value="yes"/&gt;
-             *             &lt;enumeration value="no"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
             public static class Lighting {
@@ -424,24 +349,6 @@ public class Flowers {
 
             }
 
-
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;simpleContent&gt;
-             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-             *       &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="celcius" /&gt;
-             *     &lt;/extension&gt;
-             *   &lt;/simpleContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "value"
@@ -509,23 +416,6 @@ public class Flowers {
             }
 
 
-            /**
-             * <p>Java class for anonymous complex type.
-             * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
-             * 
-             * <pre>
-             * &lt;complexType&gt;
-             *   &lt;simpleContent&gt;
-             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-             *       &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="mlPerWeek" /&gt;
-             *     &lt;/extension&gt;
-             *   &lt;/simpleContent&gt;
-             * &lt;/complexType&gt;
-             * </pre>
-             * 
-             * 
-             */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "value"
@@ -595,47 +485,6 @@ public class Flowers {
         }
 
 
-        /**
-         * <p>Java class for anonymous complex type.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
-         * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="stemColour"&gt;
-         *           &lt;simpleType&gt;
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *               &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-         *             &lt;/restriction&gt;
-         *           &lt;/simpleType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="leafColour"&gt;
-         *           &lt;simpleType&gt;
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *               &lt;pattern value="([a-zA-Zа-яА-Я])+"/&gt;
-         *             &lt;/restriction&gt;
-         *           &lt;/simpleType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="aveLenFlower" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;simpleContent&gt;
-         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;positiveInteger"&gt;
-         *                 &lt;attribute name="measure" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="cm" /&gt;
-         *               &lt;/extension&gt;
-         *             &lt;/simpleContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
-         * </pre>
-         * 
-         * 
-         */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
             "stemColour",
@@ -831,6 +680,68 @@ public class Flowers {
                     " multiplying='" + multiplying + "'\n" +
                     "}\n";
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Flower)) return false;
+            Flower flower = (Flower) o;
+            return name.equals(flower.name) &&
+                    soil.equals(flower.soil) &&
+                    origin.equals(flower.origin) &&
+                    visualParameters.leafColour.equals(flower.visualParameters.leafColour) &&
+                    visualParameters.stemColour.equals(flower.visualParameters.stemColour) &&
+                    growingTips.getLighting().getLightRequiring().equals(flower.growingTips.getLighting().getLightRequiring()) &&
+                    growingTips.getTempreture().measure.equals( growingTips.getTempreture().measure) &&
+                    growingTips.getTempreture().value.equals( growingTips.getTempreture().value) &&
+                    growingTips.getWatering().measure.equals( growingTips.getWatering().measure) &&
+                    growingTips.getWatering().value.equals( growingTips.getWatering().value) &&
+                    multiplying.equals(flower.multiplying);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name, soil, origin, visualParameters, growingTips, multiplying);
+        }
+
+        public static Comparator compareFlowerByName = new Comparator() {
+            @Override
+            public int compare(Object flower1, Object flower2) {
+                if(!(flower1 instanceof Flower) || !(flower2 instanceof Flower)) throw new ClassCastException();
+                String flowerName1 =  ((Flower) flower1).getName().toUpperCase();
+                String flowerName2 = ((Flower) flower2).getName().toUpperCase();
+
+                // в зростаючому порядку
+                return flowerName1.compareTo(flowerName2);
+            }
+
+        };
+        public static Comparator compareFlowerByOrigin = new Comparator() {
+            @Override
+            public int compare(Object flower1, Object flower2) {
+                if(!(flower1 instanceof Flower) || !(flower2 instanceof Flower)) throw new ClassCastException();
+                String flowerName1 =  ((Flower) flower1).getOrigin().toUpperCase();
+                String flowerName2 = ((Flower) flower2).getOrigin().toUpperCase();
+
+                // в зростаючому порядку
+                return flowerName1.compareTo(flowerName2);
+            }
+
+        };
+
+        public static Comparator compareFlowerByGrowingTemperature = new Comparator() {
+            @Override
+            public int compare(Object flower1, Object flower2) {
+                if(!(flower1 instanceof Flower) || !(flower2 instanceof Flower)) throw new ClassCastException();
+                Integer flowerName1 =  ((Flower) flower1).getGrowingTips().getTempreture().value;
+                Integer flowerName2 = ((Flower) flower2).getGrowingTips().getTempreture().value;
+
+
+                return flowerName1.compareTo(flowerName2);
+            }
+
+        };
+
     }
 
 }

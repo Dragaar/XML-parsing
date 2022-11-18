@@ -25,17 +25,21 @@ public class SAXFlowersHandler extends DefaultHandler {
         withText = EnumSet.range(FlowersXmlTag.FLOWER, FlowersXmlTag.MULTIPLYING);
     }
 
-    public List<Flowers.Flower> getFlovers(){
+    public List<Flowers.Flower> getFlowersAsList(){
         return flowers.getFlowers();
     }
 
+    public Flowers getFlowers(){
+        return flowers;
+    }
+
     @Override
-    public void startDocument() throws SAXException {
+    public void startDocument() {
         System.out.println("Parsing started");
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attrs) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attrs) {
         //System.out.println("|Q-"+qName+"| ");
         /*if(FlowersXmlTag.FLOWERS.getValue().equals(qName)){
             flowers = flowersFactory.createFlowers();
@@ -67,7 +71,7 @@ public class SAXFlowersHandler extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         String data = new String(ch, start, length).strip();
         if (currentXmlTag!= null) {
             switch (currentXmlTag) {
@@ -94,7 +98,7 @@ public class SAXFlowersHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri, String localName, String qName) {
         if (ELEMENT_FLOWER.equals(qName)) {
             //містить список Flower
             flowers.getFlowers().add(currentFlower);

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Input XML document. This XML is valid against Test.xsd XML schema-->
 
-<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="input.xsd">
+<flowers xmlns="http://www.nure.ua"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://www.nure.ua input.xsd ">
 	<flower>
 		<name>Rose</name>
 		<soil>дерново-подзолистая</soil>

@@ -14,6 +14,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.Collections;
 
 import static com.epam.rd.java.basic.topic08.entity.FlowersXmlTag.*;
 
@@ -48,12 +49,10 @@ public class DOMController {
 				Flowers.Flower flower = buildFlower(flowerElement);
 				flowers.getFlowers().add(flower);
 			}
-			System.out.println(flowers.getFlowers());
 		} catch (IOException | SAXException | ParserConfigurationException e) {
 			e.printStackTrace(); // log
 		}
 	}
-
 	private Flowers.Flower buildFlower(Element flowerElement) {
 		initialiseCurrentFlower();
 
@@ -139,6 +138,17 @@ public class DOMController {
 		currentFlower.getGrowingTips().setWatering(
 				flowersFactory.createFlowersFlowerGrowingTipsWatering()
 		);
+	}
+
+	public Flowers getFlowers(){
+		return flowers;
+	}
+	public void sortByName(){
+		Collections.sort(flowers.getFlowers(), Flowers.Flower.compareFlowerByName);
+	}
+	public void printResult()
+	{
+		System.out.println(flowers.getFlowers());
 	}
 }
 

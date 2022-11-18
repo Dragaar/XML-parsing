@@ -1,6 +1,9 @@
 package com.epam.rd.java.basic.topic08.controller;
 
+import com.epam.rd.java.basic.topic08.entity.Flowers;
 import org.xml.sax.helpers.DefaultHandler;
+
+import java.util.Collections;
 
 /**
  * Controller for StAX parser.
@@ -13,6 +16,16 @@ public class STAXController extends DefaultHandler {
 		this.xmlFileName = xmlFileName;
 	}
 
-	// PLACE YOUR CODE HERE
+	public void parse(){
+
+	}
+
+	public void printResult()
+	{
+
+	}
+	public void sortByGrowingTemperature(){
+		//Collections.sort(handler.getFlowers(), Flowers.Flower.compareFlowerByGrowingTemperature);
+	}
 
 }
